@@ -13,13 +13,16 @@ header {
     justify-content: space-around;
 
     .nav_control {
-        gap: 2%;
-        width: 40%;
-        justify-content: flex-end;
+        gap: 5%;
+        justify-content: space-around;
+
         nav {
-            width: 65%;
+            width: 50%;
             background-color: black;
             border-radius: calc(infinity * 1px);
+            letter-spacing: 1px;
+            min-height: 5vh;
+            align-content: center;
 
             ul {
                 height: 100%;
@@ -28,9 +31,8 @@ header {
             }
         }
 
-        div {
-            align-items: center;
-            background-color: rgb(184, 122, 122);
+        .movie-hover-wrapper {
+            position: relative;
 
             span {
                 width: 35px;
@@ -45,26 +47,112 @@ header {
     }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 1921px) {
     header {
-        flex-direction: column;
-        nav {
-            width: 100%;
-        }
-
         .nav_control {
-            flex-direction: column;
-            width: 100% !important;
+            width: 70% !important;
+
+            nav {
+                width: 40%;
+            }
+
+            .menu-icon {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 1401px) and (max-width: 1920px) {
+    header {
+        .nav_control {
+            width: 70% !important;
+
+            .menu-icon {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+    header {
+        .nav_control {
+            width: 70% !important;
+
+            .menu-icon {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    header {
+        .nav_control {
+            width: 70% !important;
+            nav {
+                width: 60%;
+            }
+            .menu-icon {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+    header {
+        .nav_control {
+            width: 70% !important;
 
             nav {
                 width: 100%;
-                letter-spacing: 1px;
-                min-height: 5vh;
-                align-content: center;
             }
-            div {
-                width: 45%;
+
+            .menu-icon {
+                display: none;
             }
         }
+    }
+}
+
+@media (max-width: 576px) {
+    .nav_control {
+        flex-direction: row;
+        position: relative;
+        cursor: pointer;
+        font-weight: bold;
+        padding: 10px;
+        width: 60% !important;
+        align-items: center;
+        justify-content: space-between !important;
+    }
+
+    .nav_control nav {
+        display: none;
+    }
+
+    .menu-icon:hover + nav {
+        display: block;
+    }
+
+    .nav_control nav ul {
+        flex-direction: column;
+        background-color: white;
+        border: 1px solid #ddd;
+        padding: 10px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 150px;
+        height: unset !important;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        align-items: unset !important;
+    }
+
+    nav {
+        width: unset !important;
     }
 }
