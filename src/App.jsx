@@ -8,6 +8,7 @@ import {
   ;
 import PageHeader from "./profile/profile";
 import "./App.css";
+import HomePage from "./profile/homepage";
 
 function AppContent() {
     console.log("Check");
@@ -18,6 +19,7 @@ export default function App() {
     return (
         <Router>
             <AppContent />
+            <HomePage />
         </Router>
     );
 }

@@ -13,9 +13,6 @@ export default function PageHeader() {
                 <nav>
                     <ul className="flex">
                         <li>
-                            <Link>Home</Link>
-                        </li>
-                        <li>
                             <Link>Search</Link>
                         </li>
                         <li>
@@ -28,9 +25,6 @@ export default function PageHeader() {
                 </nav>
                 <div className="flex movie-hover-wrapper">
                     <h1 className="text-3xl movie-text">Movie</h1>
-                    <span className="movie-icon">
-                        <RxDoubleArrowRight />
-                    </span>
                 </div>
             </div>
         </header>
