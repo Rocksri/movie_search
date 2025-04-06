@@ -29,7 +29,13 @@ export default function HomePage() {
                 </div>
             </div> */}
 
-            <div className="grid grid-cols-1 grid-rows-3 Home_Page">
+            {/* <div className="grid grid-cols-1 grid-rows-3 Home_Page">
+                <div className="grid_design tri1"></div>
+                <div className="grid_design tri2"></div>
+                <div className="grid_design tri3"></div>
+            </div> */}
+
+            <div className="flex flex-col gap-12 Home_Page">
                 <div className="grid_design tri1"></div>
                 <div className="grid_design tri2"></div>
                 <div className="grid_design tri3"></div>

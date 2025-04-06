@@ -14,7 +14,6 @@ body {
 
 header {
     width: 100%;
-    height: 70px;
     letter-spacing: 4px;
     justify-content: space-around;
     z-index: 2;
@@ -54,38 +53,37 @@ header {
     height: calc(100vh - 110px);
     /* height: 91vh; */
 
-
     .Home_Page {
         position: fixed;
-        left: 45%;
-        top: 5px;
-        transform: translateX(-50%);
+        width: 100%;
+        align-items: center;
         z-index: 1;
+        top: 5px;
+        left: -8%;
 
         .grid_design {
             width: 0;
             height: 0;
             border: 0 solid transparent;
-            border-left-width: 450px;
-            border-right-width: 450px;
-            border-top: 750px solid black;
+            border-left-width: 470px;
+            border-right-width: 470px;
+            border-top: 725px solid black;
         }
 
         .tri2 {
             position: absolute;
-            left: 53%;
+            left: 51.5%;
+            top: .5%;
             rotate: 180deg;
         }
 
         .tri3 {
             position: absolute;
-            left: 53%;
-            top: 34.4%;
+            left: 51.5%;
+            top: 104.5%;
         }
     }
 }
-
-
 
 @media (min-width: 1921px) {
     header {
@@ -101,6 +99,10 @@ header {
             }
         }
     }
+
+     /* .tri3 {
+        top: 104.25% !important;
+    } */
 }
 
 @media (min-width: 1401px) and (max-width: 1920px) {
@@ -113,6 +115,13 @@ header {
             }
         }
     }
+    .Home_Page {
+        .grid_design {
+            border-left-width: 325px !important;
+            border-right-width: 325px !important;
+            border-top: 575px solid black !important;
+        }
+    }
 }
 
 @media (min-width: 1201px) and (max-width: 1400px) {
@@ -123,6 +132,13 @@ header {
             .menu-icon {
                 display: none;
             }
+        }
+    }
+    .Home_Page {
+        .grid_design {
+            border-left-width: 275px !important;
+            border-right-width: 275px !important;
+            border-top: 525px solid black !important;
         }
     }
 }
@@ -139,6 +155,14 @@ header {
             }
         }
     }
+
+    .Home_Page {
+        .grid_design {
+            border-left-width: 250px !important;
+            border-right-width: 250px !important;
+            border-top: 475px solid black !important;
+        }
+    }
 }
 
 @media (min-width: 651px) and (max-width: 900px) {
@@ -153,6 +177,13 @@ header {
             .menu-icon {
                 display: none;
             }
+        }
+    }
+    .Home_Page {
+        .grid_design {
+            border-left-width: 250px !important;
+            border-right-width: 250px !important;
+            border-top: 475px solid black !important;
         }
     }
 }
@@ -193,11 +224,7 @@ header {
     nav {
         width: unset !important;
     }
-        .Home_Page .grid_design {
-            border-left-width: 150px !important;
-            border-right-width: 150px !important;
-            border-top: 300px solid black !important;
-        }
+    .Home_Page {
+        display: none;
+    }
 }
-
-
