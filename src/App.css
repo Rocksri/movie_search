@@ -17,6 +17,7 @@ header {
     height: 70px;
     letter-spacing: 4px;
     justify-content: space-around;
+    z-index: 2;
 
     .nav_control {
         gap: 5%;
@@ -48,108 +49,43 @@ header {
     }
 }
 
-.Home_Page {
-    width: 100%;
+.MainPage {
+    position: relative;
     height: calc(100vh - 110px);
     /* height: 91vh; */
-    padding: 50px;
-    position: relative;
-    overflow: visible;
 
-    .grid_design {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        /* Makes it a square, for aspect ratio */
-    }
 
-    .grid_design::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background-color: white;
-        /* Border color */
-        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-        border-radius: 5px;
-        z-index: 0;
-    }
-
-    .grid_design::after {
-        content: "";
-        position: absolute;
-        inset: 5px;
-        /* Creates a visible "border" effect */
-        background-color: #3498db;
-        /* Fill color */
-        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-        border-radius: 5px;
+    .Home_Page {
+        position: fixed;
+        left: 45%;
+        top: 5px;
+        transform: translateX(-50%);
         z-index: 1;
-    }
 
-    .grid_design > span {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 2;
-        color: white;
-        font-weight: bold;
-    }
+        .grid_design {
+            width: 0;
+            height: 0;
+            border: 0 solid transparent;
+            border-left-width: 450px;
+            border-right-width: 450px;
+            border-top: 750px solid black;
+        }
 
-    .tri1 {
-        transform: rotate(180deg);
-    }
+        .tri2 {
+            position: absolute;
+            left: 53%;
+            rotate: 180deg;
+        }
 
-    .tri2 {
-        transform: rotate(0deg);
-        left: -50%;
-    }
-
-    .tri3 {
-        transform: rotate(180deg);
-        left: -100%;
-    }
-
-    .tri4 {
-        transform: rotate(0deg);
-        left: -150%;
-    }
-
-    .tri5 {
-        transform: rotate(180deg);
-        left: -50%;
-    }
-
-    .tri6 {
-        transform: rotate(0deg);
-        left: -100%;
-    }
-
-    .tri7 {
-        transform: rotate(180deg);
-        left: -150%;
-    }
-
-    .tri8 {
-        transform: rotate(180deg);
-        left: 10%;
-    }
-
-    .tri9 {
-        transform: rotate(0deg);
-        left: -40%;
-    }
-
-    .tri10 {
-        transform: rotate(180deg);
-        left: -90%;
-    }
-
-    .tri11 {
-        transform: rotate(0deg);
-        left: -140%;
+        .tri3 {
+            position: absolute;
+            left: 53%;
+            top: 34.4%;
+        }
     }
 }
+
+
 
 @media (min-width: 1921px) {
     header {
@@ -257,4 +193,11 @@ header {
     nav {
         width: unset !important;
     }
+        .Home_Page .grid_design {
+            border-left-width: 150px !important;
+            border-right-width: 150px !important;
+            border-top: 300px solid black !important;
+        }
 }
+
+
