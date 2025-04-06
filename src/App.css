@@ -8,10 +8,9 @@
 }
 
 body {
-    background-color: #29262A;
+    background-color: #29262a;
     color: white;
 }
-
 
 header {
     width: 100%;
@@ -40,8 +39,8 @@ header {
             position: relative;
 
             .movie-text {
-                border-radius: calc(infinity * 1px) ;
-                border: #29262A solid 2px;
+                border-radius: calc(infinity * 1px);
+                border: #29262a solid 2px;
                 color: white;
                 padding: 1px 20px;
             }
@@ -54,15 +53,103 @@ header {
     height: calc(100vh - 110px);
     /* height: 91vh; */
     padding: 50px;
+    position: relative;
+    overflow: visible;
 
     .grid_design {
-        border-radius: 10px;
-        border: white solid;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        /* Makes it a square, for aspect ratio */
+    }
+
+    .grid_design::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: white;
+        /* Border color */
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        border-radius: 5px;
+        z-index: 0;
+    }
+
+    .grid_design::after {
+        content: "";
+        position: absolute;
+        inset: 5px;
+        /* Creates a visible "border" effect */
+        background-color: #3498db;
+        /* Fill color */
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        border-radius: 5px;
+        z-index: 1;
+    }
+
+    .grid_design > span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        color: white;
+        font-weight: bold;
+    }
+
+    .tri1 {
+        transform: rotate(180deg);
+    }
+
+    .tri2 {
+        transform: rotate(0deg);
+        left: -50%;
+    }
+
+    .tri3 {
+        transform: rotate(180deg);
+        left: -100%;
+    }
+
+    .tri4 {
+        transform: rotate(0deg);
+        left: -150%;
+    }
+
+    .tri5 {
+        transform: rotate(180deg);
+        left: -50%;
+    }
+
+    .tri6 {
+        transform: rotate(0deg);
+        left: -100%;
+    }
+
+    .tri7 {
+        transform: rotate(180deg);
+        left: -150%;
+    }
+
+    .tri8 {
+        transform: rotate(180deg);
+        left: 10%;
+    }
+
+    .tri9 {
+        transform: rotate(0deg);
+        left: -40%;
+    }
+
+    .tri10 {
+        transform: rotate(180deg);
+        left: -90%;
+    }
+
+    .tri11 {
+        transform: rotate(0deg);
+        left: -140%;
     }
 }
-
-
-
 
 @media (min-width: 1921px) {
     header {
@@ -120,7 +207,7 @@ header {
 
 @media (min-width: 651px) and (max-width: 900px) {
     header {
-            .nav_control {
+        .nav_control {
             width: 80% !important;
 
             nav {
@@ -133,7 +220,6 @@ header {
         }
     }
 }
-
 
 @media (max-width: 650px) {
     .nav_control {
