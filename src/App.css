@@ -59,28 +59,34 @@ header {
         align-items: center;
         z-index: 1;
         top: 5px;
-        left: -8%;
+        left: -13%;
 
         .grid_design {
-            width: 0;
-            height: 0;
-            border: 0 solid transparent;
-            border-left-width: 470px;
-            border-right-width: 470px;
-            border-top: 725px solid black;
+            position: absolute;
+            width: 40vw;
+            height: 60vh;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            background: rgb(0, 0, 0);
+        }
+
+        .tri1 {
+            transform: translate(10%, 0%) rotate(180deg);
         }
 
         .tri2 {
-            position: absolute;
-            left: 51.5%;
-            top: .5%;
-            rotate: 180deg;
+            transform: translate(63%, 1%) rotate(0deg);
         }
 
         .tri3 {
-            position: absolute;
-            left: 51.5%;
-            top: 104.5%;
+            transform: translate(63%, 105%) rotate(180deg);
+        }
+
+        svg {
+            position: relative;
+            top: 55%;
+            justify-self: center;
+            width: 50px;
+            height: 50px;
         }
     }
 }
@@ -100,7 +106,7 @@ header {
         }
     }
 
-     /* .tri3 {
+    /* .tri3 {
         top: 104.25% !important;
     } */
 }
@@ -115,13 +121,13 @@ header {
             }
         }
     }
-    .Home_Page {
+    /* .Home_Page {
         .grid_design {
             border-left-width: 325px !important;
             border-right-width: 325px !important;
             border-top: 575px solid black !important;
         }
-    }
+    } */
 }
 
 @media (min-width: 1201px) and (max-width: 1400px) {
@@ -134,13 +140,13 @@ header {
             }
         }
     }
-    .Home_Page {
+    /* .Home_Page {
         .grid_design {
             border-left-width: 275px !important;
             border-right-width: 275px !important;
             border-top: 525px solid black !important;
         }
-    }
+    } */
 }
 
 @media (min-width: 901px) and (max-width: 1200px) {
@@ -156,13 +162,13 @@ header {
         }
     }
 
-    .Home_Page {
+    /* .Home_Page {
         .grid_design {
             border-left-width: 250px !important;
             border-right-width: 250px !important;
             border-top: 475px solid black !important;
         }
-    }
+    } */
 }
 
 @media (min-width: 651px) and (max-width: 900px) {
@@ -179,13 +185,13 @@ header {
             }
         }
     }
-    .Home_Page {
+    /* .Home_Page {
         .grid_design {
             border-left-width: 250px !important;
             border-right-width: 250px !important;
             border-top: 475px solid black !important;
         }
-    }
+    } */
 }
 
 @media (max-width: 650px) {

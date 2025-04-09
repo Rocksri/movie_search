@@ -1,3 +1,5 @@
+import { RiPlayLine } from "react-icons/ri";
+import modekImage from "./../../modek.jpg";
 export default function HomePage() {
     return (
         <div className="MainPage">
@@ -35,9 +37,11 @@ export default function HomePage() {
                 <div className="grid_design tri3"></div>
             </div> */}
 
-            <div className="flex flex-col gap-12 Home_Page">
+            <div className="flex flex-col Home_Page">
                 <div className="grid_design tri1"></div>
-                <div className="grid_design tri2"></div>
+                <div className="grid_design tri2">
+                    <RiPlayLine />
+                </div>
                 <div className="grid_design tri3"></div>
             </div>
         </div>
