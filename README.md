@@ -35,11 +35,8 @@ This React application allows users to search for movies using the OMDB API. It 
 4.  **Obtain an OMDB API key:**
     - Visit the [OMDB API website](http://www.omdbapi.com/).
     - Sign up for a free API key.
-5.  **Create a `.env.local` file in the project root and add your API key:**
-    ```
-    REACT_APP_OMDB_API_KEY=your_omdb_api_key
-    ```
-6.  **Start the development server:**
+
+5.  **Start the development server:**
     ```bash
     npm start
     ```
